@@ -86,7 +86,7 @@ object ParallelParenthesesBalancing {
         traverse(from, until, 0, 0)
       else {
         val mid = from + (until - from) / 2
-        val (left, right) = parallel(reduce(from, mid), reduce(mid + 1, until))
+        val (left, right) = parallel(reduce(from, mid), reduce(mid, until))
 
         compose(left, right)
       }
